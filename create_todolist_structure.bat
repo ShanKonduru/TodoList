@@ -1,8 +1,11 @@
 @echo off
-REM Create frontend folder and files
-mkdir "frontend"
+REM Create ux folder and files
+mkdir ux
 
-REM Create backend folder and files
-mkdir backend
+REM Create api folder and files
+mkdir api
+
+REM Create db folder and files
+mkdir db
 
 echo TodoList folder structure created successfully!

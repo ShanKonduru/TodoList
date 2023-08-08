@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/db/data:/app/db/data    # Correct path mapping for the database
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: ./ux   # Updated to 'ux'
+    ports:
+      - "80:80"
