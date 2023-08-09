@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the backend files to the container
-COPY backend /app
+COPY . .
 
 # Set the environment variable to point to the SQLite database file
 ENV DB_PATH=db/data/todo.db
@@ -20,4 +20,4 @@ ENV DB_PATH=db/data/todo.db
 EXPOSE 5000
 
 # Start the backend server
-CMD ["python", "App.py"]
+CMD ["python", "app.py"]
